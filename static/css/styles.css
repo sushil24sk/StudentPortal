@@ -1,0 +1,27 @@
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#log {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%,-50%);
+	max-width: 90%;
+	padding: 2em 3em;
+  padding-top: 80px;
+}
+#inputf{
+  width: 300px;
+}
+
+#pswd{
+  width: 300px;
+}
