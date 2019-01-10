@@ -26,7 +26,7 @@ SECRET_KEY = 'cpnghr7(qlc)g0asy!dmi5+@%@wug7a$l$u)9&0@*)j0%g6w24'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['09a1fc1d.ngrok.io']
 
 
 # Application definition
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'login_portal',
+    'password_reset',
+    'studentPort',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +125,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/accounts/login'
