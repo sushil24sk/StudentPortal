@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+</head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <body>
+    <div class="" id="particles-js">
+
+    </div>
+
+    <script type="text/javascript" src="{% static "js/particles.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/app.js" %}"></script>
+
+    <div class="container" id="log">
+      <table align="center">
+        <tr align="center">
+          <td>  <img src="{% static "images/nit.png" %}" alt="nitjsr logo"></td>
+        </tr>
+        <tr>
+          <td>
+            <form class="form-group" align="center" action="" method="post">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button type="submit" name="button">Login</button>
+
+            </form>
+            <a href="#">Forgot Password?</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </body>
+</html>
