@@ -38,9 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'login_portal',
     'password_reset',
-    'studentPort',
     'users.apps.UsersConfig',
 ]
 
