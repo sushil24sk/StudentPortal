@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('django.contrib.auth.urls')),
     path('', include('users.urls')),
+    path('', TemplateView.as_view(template_name='firstpage.html'), name='fpage'),
     path('user/', TemplateView.as_view(template_name='home.html'), name='home'),
     path('reset/',include('password_reset.urls')),
 ]
