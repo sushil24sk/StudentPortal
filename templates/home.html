@@ -9,7 +9,7 @@
   </a>
   {% if user.is_authenticated %}
     <form class="form-inline">
-      <a class="nav-item nav-link mr-sm-2" href="#">{{ user.username }} </a>
+      <a class="nav-item nav-link mr-sm-2" href="#">{{ user.first_name }} {{ user.last_name }} </a>
       <a class="nav-item nav-link mr-sm-2" href="{% url 'logout' %}"> <button type="button" class="btn btn-danger bg-transparent text-danger" name="button">Logout</button> </a>
     </form>
   {% else %}
@@ -19,10 +19,33 @@
   </form>
   {% endif %}
 </nav>
-
+{% if user.is_authenticated %}
 <div class="container" style="padding-top: 50px;">
-  <div class="card bg-transparent" style="width: 100%;">
-    <h1 class="text-light">Welcome to NIT Jamshedpur Student Portal</h1>
+  <div class="card bg-transparent" style="width: 100%; text-align: center;">
+    <h1 class="text-light">Department of Computer Science and Engineering</h1>
   </div>
 </div>
+<div class="container" style="padding-top : 70px;">
+  <div class="card-deck">
+    <div class="card bg-transparent border-light" style="width: 15rem; height: 20rem; text-align: center;">
+      <h3 class="text-light">----</h3>
+    </div>
+    <div class="card bg-transparent border-light" style="width: 15rem; height: 20rem; text-align: center;">
+      <h3 class="text-light">----</h3>
+    </div>
+    <div class="card bg-transparent border-light" style="width: 15rem; height: 20rem; text-align: center;">
+      <h3 class="text-light">----</h3>
+    </div>
+    <div class="card bg-transparent border-light" style="width: 15rem; height: 20rem; text-align: center;">
+      <h3 class="text-light">----</h3>
+    </div>
+  </div>
+</div>
+{% else %}
+<div class="container" align="center" style="margin-top: 130px;">
+  <div class="card bg-transparent" style="width: 18rem;">
+    <img src="{% static 'images/image.png' %}" style="width: 100%; " alt="">
+  </div>
+</div>
+{% endif %}
 {% endblock %}
