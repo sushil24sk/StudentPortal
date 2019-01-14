@@ -9,7 +9,13 @@
   </a>
   {% if user.is_authenticated %}
     <form class="form-inline">
-      <a class="nav-item nav-link mr-sm-2" href="#">{{ user.first_name }} {{ user.last_name }} </a>
+      <a class="nav-item nav-link mr-sm-2" href="#">
+        {% if user.first_name != "" %}
+        {{ user.first_name }} {{ user.last_name }}
+        {% else %}
+        {{ user.username }}
+        {% endif %}
+      </a>
       <a class="nav-item nav-link mr-sm-2" href="{% url 'logout' %}"> <button type="button" class="btn btn-danger bg-transparent text-danger" name="button">Logout</button> </a>
     </form>
   {% else %}
