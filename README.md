@@ -1,4 +1,5 @@
-# Student Portal for Computer Science and Engineering Department of NIT Jamshepur 
+# Student Portal for Computer Science and Engineering Department of NIT Jamshedpur 
+<br/> Web applicaton based on Django.
 <br/>This website is in the intial stage of developement.
 
 To run this web application we need to install django on a virtual environment. 
