@@ -26,7 +26,7 @@ SECRET_KEY = 'cpnghr7(qlc)g0asy!dmi5+@%@wug7a$l$u)9&0@*)j0%g6w24'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['e2966dba.ngrok.io', '127.0.0.1']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'login_portal',
     'password_reset',
     'studentPort',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,5 @@ STATICFILES_DIRS = [
 
 LOGIN_REDIRECT_URL = '/user'
 LOGOUT_REDIRECT_URL = '/login'
+
+AUTH_USER_MODEL = 'users.CustomUser'
